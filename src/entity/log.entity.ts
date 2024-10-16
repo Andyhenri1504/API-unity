@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { Aluno } from "./aluno.entity";
 import { Fase } from "./fase.entity";
 
-@Entity()
+@Entity('LOGS')
 export class Log {
   @PrimaryGeneratedColumn()
   ID_Logs: number;

@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { Turma } from "./turma.entity";
 
-@Entity()
+@Entity('ALUNO')
 export class Aluno {
   @PrimaryGeneratedColumn()
   ID_Aluno: number;
@@ -11,6 +11,8 @@ export class Aluno {
 
   @Column({ unique: true, length: 255 })
   Email: string;
+
+//Arrumar esse ManyToOne aqui
 
   @ManyToOne(() => Turma, (turma) => turma.ID_Turma, { nullable: true, onDelete: 'SET NULL' })
   ID_Turma: Turma; // Relacionamento com Turma

@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import { Professor } from './professor.entity';
 
-@Entity()
+@Entity('TURMA')
 export class Turma {
   @PrimaryGeneratedColumn()
   ID_Turma: number;
